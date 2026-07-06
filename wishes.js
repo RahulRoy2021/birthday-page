@@ -68,7 +68,6 @@ const reasons = [
 let currentReasonIndex = 0;
 const reasonsContainer = document.getElementById("reasons-container");
 const shuffleButton = document.querySelector(".shuffle-button");
-const reasonCounter = document.querySelector(".reason-counter");
 let isTransitioning = false;
 
 // Create reason card
@@ -107,9 +106,6 @@ function displayNewReason() {
   if (currentReasonIndex < reasons.length) {
     const card = createReasonCard(reasons[currentReasonIndex]);
     reasonsContainer.appendChild(card);
-
-    // Update counter
-    reasonCounter.textContent = `Reason ${currentReasonIndex + 1} of ${reasons.length}`;
 
     currentReasonIndex++;
 
