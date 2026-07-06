@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Bubblegum+Sans&family=Comic+Neue:wght@700&family=Quicksand:wght@500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 228, 232, 0.95),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(255, 240, 214, 0.95),
+      transparent 35%
+    ),
+    linear-gradient(135deg, #fff3f6 0%, #ffe7ee 35%, #fff7e8 70%, #f8f2ff 100%);
+  background-attachment: fixed;
+  font-family: "Quicksand", sans-serif;
+  overflow-x: hidden;
+  color: #4a4a4a;
+  position: relative;
+}
+
+.custom-cursor {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s;
+}
+
+.custom-cursor svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 5px rgba(255, 182, 193, 0.5));
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 1.2rem 4rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3.2rem;
+  color: #ff2d55;
+  text-shadow: 0 4px 14px rgba(255, 45, 85, 0.15);
+  margin-bottom: 2rem;
+  animation: bounce 1.2s ease infinite;
+}
+
+.reason-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 243, 247, 0.96) 100%
+  );
+  border: 1px solid rgba(255, 45, 85, 0.14);
+  border-radius: 24px;
+  padding: 1.6rem 1.8rem;
+  margin: 1.2rem auto;
+  max-width: 760px;
+  box-shadow: 0 12px 30px rgba(255, 105, 180, 0.12);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.reason-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(255, 45, 85, 0.18);
+}
+
+.gif-box {
+  width: min(100%, 240px);
+  margin: 0 auto 1rem;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(255, 45, 85, 0.12);
+  background: #fff;
+  padding: 0.4rem;
+}
+
+.gif-box img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #fff;
+  border-radius: 14px;
+}
+
+.reason-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  position: relative;
+  z-index: 2;
+  color: #6c2f54;
+}
+
+.shuffle-button {
+  /* CUSTOMIZE: Change button gradient */
+  background: linear-gradient(45deg, #ff2d55, #ff6b8a);
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font-size: 1.15rem;
+  color: white;
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "Comic Neue", cursive;
+  box-shadow: 0 8px 22px rgba(255, 45, 85, 0.25);
+}
+
+.shuffle-button.story-mode {
+  /* CUSTOMIZE: Change story mode button gradient */
+  background: linear-gradient(45deg, #9b6dff, #ff6dc7);
+  transform: scale(1.1);
+}
+
+.shuffle-button:hover {
+  transform: scale(1.1);
+}
+
+.shuffle-button.story-mode:hover {
+  transform: scale(1.2);
+}
+
+.floating {
+  position: fixed;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+}
+
+.ending-section {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.ending-text {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.8rem;
+  color: #ff2d55;
+  margin: 1.2rem auto 0;
+  max-width: 650px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.teddy-hug {
+  width: min(240px, 70vw);
+  margin: 0 auto;
+  transform: scale(0);
+  padding: 0.8rem;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #ffffff, #ffe8ef);
+  box-shadow: 0 15px 35px rgba(255, 45, 85, 0.16);
+}
+
+.teddy-hug img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+}
+
+.reason-counter {
+  font-size: 0.9rem;
+  /* CUSTOMIZE: Change counter color */
+  color: #ff69b4;
+  margin-top: 1rem;
+  opacity: 0.7;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+  .reason-card {
+    margin: 1rem 0;
+    padding: 1.2rem;
+  }
+  .reason-text {
+    font-size: 1rem;
+  }
+  .ending-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Music Toggle Button */
+.music-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  /* CUSTOMIZE: Change music button gradient */
+  background: linear-gradient(45deg, #ff69b4, #ff99cc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+
+.music-toggle.playing {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.music-icon {
+  font-size: 1.5rem;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Back Button */
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  /* CUSTOMIZE: Change back button gradient */
+  background: linear-gradient(45deg, #ff69b4, #ff99cc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+}
+
+/* Hide cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto !important;
+  }
+  .cursor,
+  .custom-cursor {
+    display: none !important;
+  }
+}
