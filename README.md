@@ -43,6 +43,7 @@ If you want to host it online, you can deploy it easily using GitHub Pages, Netl
 - You can add more memories, wishes, or timeline events by extending the existing sections.
 
 Replace:
+
 - `#ff69b4` → `#4169e1` (Royal Blue)
 - `#ff99cc` → `#87ceeb` (Sky Blue)
 - `#da70d6` → `#6495ed` (Cornflower Blue)
@@ -52,14 +53,17 @@ Replace:
 ## Troubleshooting
 
 ### Music Not Playing?
+
 Modern browsers block autoplay. The music toggle button lets users enable it manually.
 
 ### Images Not Loading?
+
 - Check file names match exactly (case-sensitive)
 - Ensure images are in the correct folder
 - Use lowercase extensions (.jpg, not .JPG)
 
 ### Countdown Shows Wrong Time?
+
 - Make sure the date format is correct: `'Month Day, Year HH:MM:SS'`
 - Check your timezone considerations
 
