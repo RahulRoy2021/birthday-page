@@ -1,222 +1,46 @@
-# Happy Birthday Website Template
+# Happy Birthday Website
 
-Create a beautiful, personalized birthday website for your loved one! This template includes animated pages, a countdown timer, photo galleries, and heartfelt messages.
+A beautiful, personalized birthday website made with HTML, CSS, and JavaScript. It is designed to feel warm, romantic, and interactive for a special birthday celebration.
 
-## Live Demo
-[View Demo](https://notsointresting.github.io/HappyBirthday/)
+## What this site includes
 
-## Features
+- A lovely landing page with a birthday countdown
+- A wishes page with heartfelt messages
+- A memories gallery with photo cards and captions
+- A relationship timeline page
+- Soft animations, floating hearts, confetti, and music controls
+- Responsive styling for desktop and mobile
 
-- Countdown timer to the birthday
-- Animated homepage with custom greetings
-- "Reasons I Love You" interactive page
-- Photo memories gallery
-- Timeline of your relationship
-- Background music support
-- Fully responsive design
-- Confetti celebrations
-- Share functionality
+## Project structure
 
----
+- index.html — Home page
+- wishes.html — Wishes / reasons page
+- memories.html — Memories gallery page
+- timeline.html — Relationship timeline page
+- home.css and home.js — Home page styling and behavior
+- wishes.css and wishes.js — Wishes page styling and behavior
+- photos/ — Your image files
+- hbd.mp3 — Optional background music
 
-## Quick Start
+## How to customize it
 
-### Step 1: Fork or Clone This Repository
+1. Open the HTML files and update the names, messages, and birthday details.
+2. Replace the placeholder photos in the photos folder with your own.
+3. Edit the captions and text in memories.html, wishes.js, and timeline.html.
+4. Add an audio file named hbd.mp3 if you want background music.
+5. Open index.html in your browser to view the site.
 
-```bash
-git clone https://github.com/notsointresting/happy-birthday-template.git
-cd happy-birthday-template
-```
+## Quick start
 
-### Step 2: Gather Your Information
+No build step is required. Just open the project folder in a browser.
 
-Before you start customizing, collect the following:
+If you want to host it online, you can deploy it easily using GitHub Pages, Netlify, or Vercel.
 
----
+## Notes
 
-## Information Checklist
-
-### Required Information
-
-| Item | Description | Example |
-|------|-------------|---------|
-| **Their Name** | The birthday person's name | "Sarah", "John" |
-| **Their Age** | The age they're turning | 22, 25, 30 |
-| **Birthday Date** | Their birthday (for countdown) | "January 25, 2025" |
-| **Your Name** | Your name (the creator) | "Alex" |
-
-### Photos Needed
-
-| Photo | Description | Filename |
-|-------|-------------|----------|
-| **Photo 1** | A photo of them or you together | `photo-1.jpg` |
-| **Photo 2** | Another memorable photo | `photo-2.jpg` |
-| **Photo 3** | Birthday/celebration photo | `photo-3.jpg` |
-| **Favicon** | Small icon for browser tab (optional) | `favicon.png` |
-
-### Personalization Details
-
-| Item | Description | Where It's Used |
-|------|-------------|-----------------|
-| **Nicknames** | Pet names for each other | Homepage greeting |
-| **Relationship** | Friend/Partner/Family | Messages & titles |
-| **How You Met** | Story of how you met | Memories page |
-| **Special Memories** | 3-5 memorable moments | Photo captions |
-| **Wishes/Messages** | Birthday wishes (5-10 reasons you love them) | Wishes page |
-
-### Optional Extras
-
-| Item | Description |
-|------|-------------|
-| **Background Music** | An MP3 file (birthday song, favorite song) |
-| **Custom GIFs** | Animated backgrounds or decorations |
-| **Timeline Events** | Key dates in your relationship |
-
----
-
-## File Structure
-
-```
-template/
-├── index.html          # Homepage with countdown
-├── wishes.html         # "Reasons I Love You" page
-├── memories.html       # Photo gallery
-├── timeline.html       # Relationship timeline
-├── home.css            # Homepage styles
-├── home.js             # Homepage scripts
-├── wishes.css          # Wishes page styles
-├── wishes.js           # Wishes page scripts
-├── photos/             # Your photos folder
-│   ├── photo-1.jpg
-│   ├── photo-2.jpg
-│   └── photo-3.jpg
-├── hbd.mp3            # Background music (optional)
-└── README.md          # This file
-```
-
----
-
-## Customization Guide
-
-### Step 3: Update the Birthday Date
-
-Open `home.js` and find the countdown configuration:
-
-```javascript
-// Change this to their birthday
-const birthdayDate = new Date('January 25, 2025 00:00:00');
-```
-
-### Step 4: Update Names and Messages
-
-#### In `index.html`:
-```html
-<!-- Change the name -->
-<h1>Happy Birthday [THEIR NAME]</h1>
-
-<!-- Change the greeting -->
-<p class="nickname-text">To my favorite [NICKNAME]</p>
-
-<!-- Change your signature -->
-<p class="from-text">- From [YOUR NAME]</p>
-
-<!-- Change the age -->
-<div class="level-up-badge">Level [AGE] Unlocked!</div>
-```
-
-#### In `wishes.html`:
-Update the title and name:
-```html
-<h1>Happy Birthday [THEIR NAME]</h1>
-```
-
-#### In `memories.html`:
-Update the final message section:
-```html
-<h2>Happy [AGE]th Birthday, [THEIR NAME]!</h2>
-<p class="signature">- [YOUR NAME]</p>
-```
-
-### Step 5: Add Your Photos
-
-1. Add your photos to the `photos/` folder
-2. Rename them to match the template:
-   - `photo-1.jpg`
-   - `photo-2.jpg`
-   - `photo-3.jpg`
-3. Or update the image paths in HTML files
-
-### Step 6: Customize Photo Captions
-
-In `memories.html`, update the memory cards:
-
-```html
-<div class="memory-card">
-    <img src="./photos/photo-1.jpg" alt="Description" class="memory-img">
-    <div class="memory-date">[DATE OR TITLE]</div>
-    <div class="memory-caption">[YOUR CAPTION HERE]</div>
-</div>
-```
-
-### Step 7: Add Birthday Wishes/Reasons
-
-In `wishes.js`, update the reasons array:
-
-```javascript
-const reasons = [
-    "Because your smile lights up my day",
-    "Because you always know how to make me laugh",
-    "Because you're the best listener",
-    "Because you give the warmest hugs",
-    "Because you believe in me",
-    // Add more reasons...
-];
-```
-
-### Step 8: Add Background Music (Optional)
-
-1. Add your MP3 file to the root folder as `hbd.mp3`
-2. The music toggle button will appear automatically
-
----
-
-## Deployment Options
-
-### Option 1: GitHub Pages (Free)
-
-1. Push your code to GitHub
-2. Go to Repository Settings > Pages
-3. Select "main" branch and save
-4. Your site will be live at `https://username.github.io/repo-name`
-
-### Option 2: Netlify (Free)
-
-1. Go to [netlify.com](https://netlify.com)
-2. Drag and drop your folder
-3. Get a free URL instantly
-
-### Option 3: Vercel (Free)
-
-1. Go to [vercel.com](https://vercel.com)
-2. Import your GitHub repository
-3. Deploy with one click
-
----
-
-## Color Customization
-
-The default theme uses pink/purple colors. To change:
-
-### In CSS files, find and replace:
-
-| Current Color | Description |
-|---------------|-------------|
-| `#ff69b4` | Hot Pink (primary) |
-| `#ff99cc` | Light Pink |
-| `#da70d6` | Orchid |
-| `#ffd1dc` | Pale Pink |
-
-### Example: Blue Theme
+- The design is fully customizable through the HTML and CSS files.
+- Colors, fonts, animations, and content can all be adjusted to match your style.
+- You can add more memories, wishes, or timeline events by extending the existing sections.
 
 Replace:
 - `#ff69b4` → `#4169e1` (Royal Blue)
